@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springdemo
+    username: root
+    password: Shawn_801116
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml #扫描所有Mybatis的mapper xml文件
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.example.springdemo.entity
+
+mybatis-plus:
+  type-aliases-package: com.example.springdemo.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+files:
+  upload:
+    path: C:\Users\hawkh\Documents\GitHub\springdemo\file
